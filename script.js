@@ -16,6 +16,7 @@ function makeThumbnail(srcURL, caption) {
       </a>
   </div>
 <div>
+
 `.replace("IMAGE_URL", srcURL).replace("IMAGE_URL", srcURL).replace("CAPTION", caption);
 }
 
@@ -31,45 +32,42 @@ function callGiphyAPIWithSearchTerm(searchTerm) {
         success: function(response) {
             console.log(response);
             console.log(response['Search'][0]['Poster']);
-            for (var i=0; i<10; i++) {
+            for (var i=0; i<20; i++) {
             if (response['Search'][i]['Poster'] !== "N/A") {
-            appendImageToBody(response['Search'][i]['Poster'], response['Search'][i]['Title']);
+            appendImageToBody(response['Search'][i]['Poster'], response['Search'][i]['Title'],response['Search'][i]['Year']);
                 }
             }
         }
     });
 }
+function changeMargin(response) {
+    '.col-md-5'.style.margin = "100px";
+}
+
+
 
 
 $("#zaara").click(function(){
     var searchTerm = $("#search-text").val();
     callGiphyAPIWithSearchTerm(searchTerm);
+$(".col-md-5").css("margin", "100%");
      });
 
-function getThumbnail(original, scale) {
-  var canvas = document.createElement("canvas");
 
-  canvas.width = original.width * scale;
-  canvas.height = original.height * scale;
-
-  canvas.getContext("2d").drawImage(original, 0, 0, canvas.width, canvas.height);
-
-  return canvas;
-}
-$('#zaara').click(function () {
-   $('thumbnail').html('thumbnail','');
-});
 
 $("#clear").click(function(){
-$("searchTerm").hide('Search');
-     });
-
-
-$(window).scroll(function () {
-    var scrollTop = $(window).scrollTop();
-    var height = $(window).height();
-
-    $('.logo_container, .slogan').css({
-        'opacity': ((height - scrollTop) / height)
-    }); 
+    $(".col-md-5").hide();
 });
+
+//  $('.bs-example-modal-lg').modal("show");
+//  $('.bs-example-modal-lg').on('shown.bs.modal', function () {
+//   $(".bs-example-modal-lg").modal("show");
+// })
+$("#buttoncom").click(function(){
+alert("Thank you for the suggetsions!");
+});
+
+// try ro see on the bottom of this line if it works.
+
+
+

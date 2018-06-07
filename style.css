@@ -3,4 +3,114 @@ text-align: center;
 }
 #centerz{
     text-align: center;
+    color:white;
 }
+body{
+    margin:20px;
+    display: list-item ;
+    margin-top: 100px;
+    text-align: center;
+    background-color:black; 
+    /*width: auto;*/
+    background: url("https://static1.squarespace.com/static/565db3e1e4b0e37ee505f9a4/t/56605607e4b0acd8ed319136/1449154056979/bokeh-lights-sunset-city.jpg?format=1500w") no-repeat fixed center;
+    
+    
+}
+div {
+    display: inline;
+    color:white;
+}
+#carouselGallery{
+        width:200%;
+        height:300px;
+}
+.img-gallery{
+    height:540px;
+    display: inline-block;
+    margin: auto;
+}
+.form{
+    text-align: center;
+    margin-bottom: 15px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+#buttonmod{
+    text-align: center;
+}
+.carousel-control-next, .carousel-control-prev{
+    position: absolute;
+    top: 0;
+    bottom: 0
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin: 2px;
+    text-indent: -999px;
+    background-color: #000\9;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.carousel-indicators .active {
+    height: 10px;
+    width:20px;
+    margin: 1px;
+    border: 1px solid #fff;
+}
+.modal {
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050; 
+     /*display: none;*/
+    /*overflow: hidden;*/
+    outline: 0;
+}
+#inputlg{
+    height:70px;
+}
+.modal-title {
+    margin: 0;
+    line-height: 5;
+}
+#modal-open {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+    height:50px;
+    margin-bottom:5px;
+    padding-right:2px;
+}
+.modal.show .modal-dialog {
+    transform: translate(0,0);
+}
+.modal-content{
+    background-color: #fefefe;
+    margin: 20% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 2px solid #888;
+    width: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
